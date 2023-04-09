@@ -35,7 +35,7 @@ func getDBConfig() (username string, password string,
 	dir, _ := os.Getwd()
 	viper.SetConfigName("app")
 	// Set the path to look for the configurations file
-	viper.AddConfigPath(dir + "/../configs")
+	viper.AddConfigPath(dir + "/configs")
 	// Enable VIPER to read Environment Variables
 	viper.AutomaticEnv()
 
