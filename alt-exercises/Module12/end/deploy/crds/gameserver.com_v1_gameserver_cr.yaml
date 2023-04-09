@@ -1,0 +1,10 @@
+apiVersion: gameserver.com/v1
+kind: Gameserver
+metadata:
+  name: gameserver
+spec:
+  # Add fields here
+  gameid: "pokemoncards"
+  name: "Pokemon memory game"
+  description: "a memory game in whch you have to match two exact cards"
+  port: 30685

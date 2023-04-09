@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game
+data:
+  GAME_ID: "pokemoncards"
+  GAME_NAME: "Pokemon memory game"
+  GAME_DESCRIPTION: "a memory game in whch you have to match two exact cards"

@@ -1,0 +1,38 @@
+[
+    {
+      "id": 354,
+      "name": "Bray",
+      "email": "braysalazar@comcubine.com",
+      "password": "Carly123"
+    },
+    {
+      "id": 6776,
+      "name": "Richmond",
+      "email": "richmondsalazar@comcubine.com",
+      "password": "Helena123"
+    },
+    {
+      "id": 3473,
+      "name": "Helen",
+      "email": "helensalazar@comcubine.com",
+      "password": "Sloan123"
+    },
+    {
+      "id": 7421,
+      "name": "Tate",
+      "email": "tatesalazar@comcubine.com",
+      "password": "Brady123"
+    },
+    {
+      "id": 4553,
+      "name": "Koch",
+      "email": "kochsalazar@comcubine.com",
+      "password": "Frederick123"
+    },
+    {
+      "id": 8983,
+      "name": "Casey",
+      "email": "caseysalazar@comcubine.com",
+      "password": "Hattie123"
+    }
+  ]

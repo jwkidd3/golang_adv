@@ -1,0 +1,70 @@
+---
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: gameserver
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: gameserver
+      template:
+        metadata:
+          labels:
+            app: gameserver
+        spec:
+          containers:
+            - name: gameserver
+              image: "motisoffer/gogameserver:1.0"
+              imagePullPolicy: Always
+              ports:
+                - name: gameserver
+                  containerPort: 8080
+              env:
+                - name: MYSQL_DATABASE
+                  value: users_db
+                - name: MYSQL_SERVICE_HOST
+                  value: mysql-service
+                - name: MYSQL_USERNAME
+                  valueFrom:
+                    secretKeyRef:
+                      name: mysql-auth
+                      key: username
+                - name: MYSQL_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: mysql-auth
+                      key: password
+                - name: GAME_ID
+                  valueFrom:
+                    configMapKeyRef:
+                      name: game
+                      key: GAME_ID
+                - name: GAME_NAME
+                  valueFrom:
+                    configMapKeyRef:
+                      name: game
+                      key: GAME_NAME   
+                - name: GAME_DESCRIPTION
+                  valueFrom:
+                    configMapKeyRef:
+                      name: game
+                      key: GAME_DESCRIPTION                      
+---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: gameserver-service
+      labels:
+        app: gameserver
+    spec:
+      type: NodePort
+      ports:
+        - port: 8080
+          targetPort: 8080
+          nodePort: 30685
+          protocol: TCP
+      selector:
+        app: gameserver
+    
+    
