@@ -8,8 +8,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/someuser/gameserver/internal/users"
-	"github.com/someuser/gameserver/internal/users/db"
+	"github.com/jwkidd3/gameserver/internal/users"
+	"github.com/jwkidd3/gameserver/internal/users/db"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -55,7 +55,7 @@ func FindUser(email, password string) (*users.User, error) {
 	return user, nil
 }
 
-//CreateUser function -- create a new user
+// CreateUser function -- create a new user
 func CreateUser(w http.ResponseWriter, r *http.Request) {
 
 	user := &users.User{}
@@ -98,7 +98,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(resp)
 }
 
-//FetchUser function
+// FetchUser function
 func FetchUsers(w http.ResponseWriter, r *http.Request) {
 	var theUsers []users.User
 

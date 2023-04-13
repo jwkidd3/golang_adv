@@ -9,6 +9,7 @@ import (
 
 func main() {
 
+	// Handle routes
 	r := routes.Handlers()
 
 	err := http.ListenAndServe(":5001", r)
