@@ -8,26 +8,6 @@ Each Go command or subcommand has various ways to view and how to execute or use
 `go help fmt`, `go doc cmd/gofmt`.  Some commands/subcommands have wrappers/aliases (ex. `go fmt` calls `gofmt`), the
 wrapper may include its own flags and behavior.
 
-
-## Preperation
-
-If not installed, install the latest version of Go.
-
-```
-~$ curl -sLO https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
-
-~$ sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
-
-~$ export PATH=/usr/local/go/bin:$PATH
-
-~$ go version
-
-go version go1.20.3 linux/amd64
-
-~$
-```
-
-
 ## gofmt
 
 Gofmt formats Go programs. It uses tabs for indentation and blanks for alignment. Alignment assumes that an editor is
