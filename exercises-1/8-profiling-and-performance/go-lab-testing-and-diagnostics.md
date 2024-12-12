@@ -336,6 +336,8 @@ Set the BROWSER environment variable to your desired browser.
 (pprof) web
 
 (pprof) #it worked
+
+or: go tool pprof -http=:8081 mem.prof
 ```
 
 <img src="./images/pprof001-web.png" width=75% />
